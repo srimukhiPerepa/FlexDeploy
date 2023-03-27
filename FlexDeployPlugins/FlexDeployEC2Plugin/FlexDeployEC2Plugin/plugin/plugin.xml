@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PluginDefinition xmlns="http://flexagon.com/deploy/plugin">
+  <Name>FlexagonEC2Plugin</Name>
+  <PluginDisplayName>Amazon EC2</PluginDisplayName>
+  <Description>A plugin to manage Amazon Web Services EC2 instances.</Description>
+  <TechnologyGroup>Cloud</TechnologyGroup>
+  <SubTechnologyGroup>Amazon Web Services</SubTechnologyGroup>
+  <MaxConcurrentThreads>-1</MaxConcurrentThreads>
+  <Vendor>Flexagon</Vendor>
+  <Version>${{FD_PROJECT_VERSION}}</Version>
+  <Operations>
+    <Operation>
+      <!--createInstance-->
+      <Name>createInstance</Name>
+      <Description>Create a new Amazon EC2 instance</Description>
+      <DocumentationLink>createInstance+(EC2)</DocumentationLink>
+      <Target>flexagon.fd.plugin.ec2.operations.EC2CreateInstance</Target>
+      <PropertyKeys>
+        <PropertyKey>FDAWS_ENDPOINT</PropertyKey>
+        <PropertyKey>FDAWS_ACCESS_KEY</PropertyKey>
+        <PropertyKey>FDAWS_SECRET_KEY</PropertyKey>
+      </PropertyKeys>
+      <ProducesArtifacts>false</ProducesArtifacts>
+      <ConsumesArtifacts>false</ConsumesArtifacts>
+      <Outputs>
+        <AllowsUserDefined>false</AllowsUserDefined>
+        <Output>FDAWS_EC2_OUT_INSTANCE_ID</Output>
+      </Outputs>
+      <Inputs>
+        <AllowsUserDefined>false</AllowsUserDefined>
+        <Input>
+          <Name>FDAWS_EC2_IMAGE_ID</Name>
+          <DisplayName>Image ID</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>The image ID of the AMI to use in creation. (e.g. ami-d0f506b0)</Description>
+          <IsRequired>true</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+        <Input>
+          <Name>FDAWS_EC2_ELASTIC_IP_ID</Name>
+          <DisplayName>Elastic IP ID</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>The allocation ID of the elastic IP to use. To create a new elastic IP, enter "new".</Description>
+          <IsRequired>false</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+        <Input>
+          <Name>FDAWS_EC2_INSTANCE_TYPE</Name>
+          <DisplayName>Instance Type</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>The type of instance to create. (e.g. c4.2xlarge)</Description>
+          <IsRequired>true</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+        <Input>
+          <Name>FDAWS_EC2_SEC_GROUP_NAME</Name>
+          <DisplayName>Security Group Name</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>The name of the security group to use on creation.</Description>
+          <IsRequired>true</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+        <Input>
+          <Name>FDAWS_EC2_KEY_NAME</Name>
+          <DisplayName>Key Name</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>The name of the key file to use on creation.</Description>
+          <IsRequired>true</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+        <Input>
+          <Name>FDAWS_EC2_MIN_INSTANCES</Name>
+          <DisplayName>Min Instances</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>Integer</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>The minimum number of instances to create (Default 1)</Description>
+          <IsRequired>false</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+        <Input>
+          <Name>FDAWS_EC2_MAX_INSTANCES</Name>
+          <DisplayName>Max Instances</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>Integer</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>The maximium number of instances to create (Default 1)</Description>
+          <IsRequired>false</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+      </Inputs>
+      <EndPointSpecification>
+        <Selection>
+          <All/>
+        </Selection>
+        <Execution>
+          <Any/>
+        </Execution>
+      </EndPointSpecification>
+    </Operation>
+    <Operation>
+      <!--startInstance-->
+      <Name>startInstance</Name>
+      <Description>Start an Amazon EC2 instance</Description>
+      <DocumentationLink>startInstance+(EC2)</DocumentationLink>
+      <Target>flexagon.fd.plugin.ec2.operations.EC2StartInstance</Target>
+      <PropertyKeys>
+        <PropertyKey>FDAWS_ENDPOINT</PropertyKey>
+        <PropertyKey>FDAWS_ACCOUNT_CODE</PropertyKey>
+        <PropertyKey>FDAWS_CLI_PATH</PropertyKey>
+        <PropertyKey>FDAWS_REGION</PropertyKey>
+        <PropertyKey>FDAWS_EC2_STATUS_CHECK_COUNT</PropertyKey>
+        <PropertyKey>FDAWS_EC2_STATUS_INTERVAL_DURATION</PropertyKey>
+      </PropertyKeys>
+      <ProducesArtifacts>false</ProducesArtifacts>
+      <ConsumesArtifacts>false</ConsumesArtifacts>
+      <Outputs>
+        <AllowsUserDefined>false</AllowsUserDefined>
+        <Output>FDAWS_OUT_EC2_INSTANCE_STATUS</Output>
+        <Output>FDAWS_OUT_EC2_INSTANCE_RESP</Output>
+        <Output>FDAWS_OUT_EC2_INSTANCE_ERR</Output>
+      </Outputs>
+      <Inputs>
+        <AllowsUserDefined>false</AllowsUserDefined>
+        <Input>
+          <Name>FDAWS_EC2_INP_INSTANCE_IDS</Name>
+          <DisplayName>Instance IDs</DisplayName>
+          <Description>Provide either comma or space separated IDs of the instances to start.</Description>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <IsRequired>true</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+      </Inputs>
+      <EndPointSpecification>
+        <Selection>
+          <All/>
+        </Selection>
+        <Execution>
+          <Any/>
+        </Execution>
+      </EndPointSpecification>
+    </Operation>
+    <Operation>
+      <!--stopInstance-->
+      <Name>stopInstance</Name>
+      <Description>Stop an Amazon EC2 instance</Description>
+      <DocumentationLink>stopInstance+(EC2)</DocumentationLink>
+      <Target>flexagon.fd.plugin.ec2.operations.EC2StopInstance</Target>
+      <PropertyKeys>
+        <PropertyKey>FDAWS_ENDPOINT</PropertyKey>
+        <PropertyKey>FDAWS_ACCOUNT_CODE</PropertyKey>
+        <PropertyKey>FDAWS_CLI_PATH</PropertyKey>
+        <PropertyKey>FDAWS_REGION</PropertyKey>
+        <PropertyKey>FDAWS_EC2_STATUS_CHECK_COUNT</PropertyKey>
+        <PropertyKey>FDAWS_EC2_STATUS_INTERVAL_DURATION</PropertyKey>
+      </PropertyKeys>
+      <ProducesArtifacts>false</ProducesArtifacts>
+      <ConsumesArtifacts>false</ConsumesArtifacts>
+      <Outputs>
+        <AllowsUserDefined>false</AllowsUserDefined>
+        <Output>FDAWS_OUT_EC2_INSTANCE_STATUS</Output>
+        <Output>FDAWS_OUT_EC2_INSTANCE_RESP</Output>
+        <Output>FDAWS_OUT_EC2_INSTANCE_ERR</Output>
+      </Outputs>
+      <Inputs>
+        <AllowsUserDefined>false</AllowsUserDefined>
+        <Input>
+          <Name>FDAWS_EC2_INP_INSTANCE_IDS</Name>
+          <DisplayName>Instance IDs</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>Provide either comma or space separated IDs of the instances to stop.</Description>
+          <IsRequired>true</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+        <Input>
+          <Name>FDAWS_EC2_WITH_FORCE</Name>
+          <DisplayName>Force Stop</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>Boolean</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>Stop the selected instance forcibly.</Description>
+          <IsRequired>false</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+      </Inputs>
+      <EndPointSpecification>
+        <Selection>
+          <All/>
+        </Selection>
+        <Execution>
+          <Any/>
+        </Execution>
+      </EndPointSpecification>
+    </Operation>
+    <Operation>
+      <!--terminateInstance-->
+      <Name>terminateInstance</Name>
+      <Description>Terminate an Amazon EC2 instance</Description>
+      <DocumentationLink>terminateInstance+(EC2)</DocumentationLink>
+      <Target>flexagon.fd.plugin.ec2.operations.EC2TerminateInstance</Target>
+      <PropertyKeys>
+        <PropertyKey>FDAWS_ENDPOINT</PropertyKey>
+        <PropertyKey>FDAWS_ACCESS_KEY</PropertyKey>
+        <PropertyKey>FDAWS_SECRET_KEY</PropertyKey>
+      </PropertyKeys>
+      <ProducesArtifacts>false</ProducesArtifacts>
+      <ConsumesArtifacts>false</ConsumesArtifacts>
+      <Outputs>
+        <AllowsUserDefined>false</AllowsUserDefined>
+      </Outputs>
+      <Inputs>
+        <AllowsUserDefined>false</AllowsUserDefined>
+        <Input>
+          <Name>FDAWS_EC2_INP_INSTANCE_IDS</Name>
+          <DisplayName>Instance IDs</DisplayName>
+          <Description>Provide either comma or space separated IDs of the instances to stop.</Description>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <IsRequired>true</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+      </Inputs>
+      <EndPointSpecification>
+        <Selection>
+          <All/>
+        </Selection>
+        <Execution>
+          <Any/>
+        </Execution>
+      </EndPointSpecification>
+    </Operation>
+    <Operation>
+      <!--createSecurityGroup-->
+      <Name>createSecurityGroup</Name>
+      <Description>Create a security group with user defined rules.</Description>
+      <DocumentationLink>createSecurityGroup+(EC2)</DocumentationLink>
+      <Target>flexagon.fd.plugin.ec2.operations.EC2CreateSecurityGroup</Target>
+      <PropertyKeys>
+        <PropertyKey>FDAWS_ENDPOINT</PropertyKey>
+        <PropertyKey>FDAWS_ACCESS_KEY</PropertyKey>
+        <PropertyKey>FDAWS_SECRET_KEY</PropertyKey>
+      </PropertyKeys>
+      <ProducesArtifacts>false</ProducesArtifacts>
+      <ConsumesArtifacts>false</ConsumesArtifacts>
+      <Outputs>
+        <AllowsUserDefined>false</AllowsUserDefined>
+      </Outputs>
+      <Inputs>
+        <AllowsUserDefined>false</AllowsUserDefined>
+        <Input>
+          <Name>FDAWS_EC2_SEC_GROUP_NAME</Name>
+          <DisplayName>Name</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>The name to give to the new security group.</Description>
+          <IsRequired>true</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+        <Input>
+          <Name>FDAWS_EC2_SEC_GROUP_DESCRIPTION</Name>
+          <DisplayName>Description</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>1</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>A description of the security group.</Description>
+          <IsRequired>false</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+        <Input>
+          <Name>FDAWS_EC2_INBOUND_SECURITY_RULES</Name>
+          <DisplayName>Inbound Security Rules</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>5</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>Inbound security rules to be added to the security group. Each rule has 3 parts: protocol, IP range, and port range. Formatted as [protocol,ipRange,portRange;]. (e.g.
+                       tcp,192.168.10.45/32,5900-5910;) See plugin guide for more examples.</Description>
+          <IsRequired>false</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+        <Input>
+          <Name>FDAWS_EC2_OUTBOUND_SECURITY_RULES</Name>
+          <DisplayName>Outbound Security Rules</DisplayName>
+          <IsDefaultValueExpression>false</IsDefaultValueExpression>
+          <DataType>String</DataType>
+          <DisplayRows>5</DisplayRows>
+          <DisplayColumns>100</DisplayColumns>
+          <Description>Outbound security rules to be added to the security group. Each rule has 3 parts: protocol, IP range, and port range. Formatted as [protocol,ipRange,portRange;]. (e.g.
+                       tcp,192.168.102.56/32,22;) See plugin guide for more examples.</Description>
+          <IsRequired>false</IsRequired>
+          <IsEncrypted>false</IsEncrypted>
+        </Input>
+      </Inputs>
+      <EndPointSpecification>
+        <Selection>
+          <All/>
+        </Selection>
+        <Execution>
+          <Any/>
+        </Execution>
+      </EndPointSpecification>
+    </Operation>
+    <!-- <Operation> <!-createKeyPair
+			<Name>createKeyPair</Name>
+			<Description>Create a key pair for use with EC2 instances.</Description>
+			<Target>flexagon.fd.plugin.ec2.operations.EC2CreateKeyPair</Target>
+			<PropertyKeys>
+				<PropertyKey>FDAWS_ENDPOINT</PropertyKey>
+				<PropertyKey>FDAWS_ACCESS_KEY</PropertyKey>
+				<PropertyKey>FDAWS_SECRET_KEY</PropertyKey>
+			</PropertyKeys>
+			<ProducesArtifacts>false</ProducesArtifacts>
+			<ConsumesArtifacts>false</ConsumesArtifacts>
+			<Outputs>
+				<AllowsUserDefined>false</AllowsUserDefined>
+			</Outputs>
+			<Inputs>
+				<AllowsUserDefined>false</AllowsUserDefined>
+				<Input>
+					<Name>FDAWS_EC2_KEY_NAME</Name>
+					<IsDefaultValueExpression>false</IsDefaultValueExpression>
+					<DataType>String</DataType>
+					<DisplayRows>1</DisplayRows><DisplayColumns>100</DisplayColumns>
+					<Description>The name to give to the new key.</Description>
+					<IsRequired>true</IsRequired>
+					<IsEncrypted>false</IsEncrypted>
+				</Input>
+			</Inputs>
+			<EndPointSpecification>
+				<Selection>
+					<All/>
+				</Selection>
+				<Execution>
+					<Any/>
+				</Execution>
+			</EndPointSpecification>
+		</Operation>-->
+  </Operations>
+</PluginDefinition>

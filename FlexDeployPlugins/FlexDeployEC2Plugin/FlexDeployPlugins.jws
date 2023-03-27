@@ -1,0 +1,186 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jws:workspace xmlns:jws="http://xmlns.oracle.com/ide/project">
+   <hash n="adrs-workspace-properties">
+      <value n="adrs-instance-binding" v="DefaultServer"/>
+   </hash>
+   <value n="application-package-prefix" v="flexagon.fd.plugin"/>
+   <value n="appTemplateId" v="javaAppTemplate"/>
+   <hash n="component-versions">
+      <value n="oracle.adf.share.dt.migration.jps.JaznCredStoreMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.adf.share.dt.migration.wsm.PolicyAttachmentMigratorHelper" v="12.1.2.0.0"/>
+      <value n="oracle.adfdt.controller.adfc.source.migration.SavePointDataSourceForWLSMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.adfdtinternal.model.ide.security.extension.AdfSecurityMigrator" v="11.1.1.1.0.13"/>
+      <value n="oracle.ide.model.Project" v="11.1.1.1.0;12.1.2.0.0;12.1.3.0.0"/>
+      <value n="oracle.jbo.dt.jdevx.deployment.JbdProjectMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.jdevimpl.appresources.ApplicationSrcDirMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.jdevimpl.deploy.migrators.JeeDeploymentMigrator" v="12.1.2.0.0"/>
+      <value n="oracle.jdevimpl.xml.oc4j.jps.JpsConfigMigratorHelper" v="11.1.1.1.0.1"/>
+      <value n="oracle.jdevimpl.xml.wl.WeblogicMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.mds.internal.dt.deploy.base.MarMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.mds.internal.dt.ide.migrator.MDSConfigMigratorHelper" v="11.1.1.0.5313"/>
+   </hash>
+   <list n="contentSets">
+      <string v="oracle.mds.internal.dt.ide.appresources.MDSAppResourceCSProvider/MDSAppContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationSrcContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ADFContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationBuildToolContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
+   </list>
+   <list n="listOfChildren">
+      <hash><url n="URL" path="FlexDeployACCPlugin/FlexDeployACCPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployAcunetixPlugin/FlexDeployAcunetixPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployADFPlugin/FlexDeployADFPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployAnchorePlugin/FlexDeployAnchorePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployAngularPlugin/FlexDeployAngularPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployAnsiblePlugin/FlexDeployAnsiblePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployAntPlugin/FlexDeployAntPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployApacheHttpPlugin/FlexDeployApacheHttpPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployAPIFortressPlugin/FlexDeployAPIFortressPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployApigeePlugin/FlexDeployApigeePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployArtifactoryPlugin/FlexDeployArtifactoryPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployArtifactoryXrayPlugin/FlexDeployArtifactoryXrayPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployAutomationAnywherePlugin/FlexDeployAutomationAnywherePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployAWSPlugin/FlexDeployAWSPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployAzurePlugin/FlexDeployAzurePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployB2BPlugin/FlexDeployB2BPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployCheckmarxPlugin/FlexDeployCheckmarxPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployClearCasePlugin/FlexDeployClearCasePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployCSCore/FlexDeployCSCore.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployCucumberPlugin/FlexDeployCucumberPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployCVSPlugin/FlexDeployCVSPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployDBCloudPlugin/FlexDeployDBCloudPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployDellBoomiPlugin/FlexDeployDellBoomiPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployDockerBenchPlugin/FlexDeployDockerBenchPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployDockerPlugin/FlexDeployDockerPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployEBSPlugin/FlexDeployEBSPlugin.jpr"/></hash>
+	  <hash><url n="URL" path="FlexDeployEC2Plugin/FlexDeployEC2Plugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployFilePlugin/FlexDeployFilePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployFusionInstallPlugin/FlexDeployFusionInstallPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployFusionPluginCore/FlexDeployFusionPluginCore.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployGITPlugin/FlexDeployGITPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployGlassfishPlugin/FlexDeployGlassfishPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployGradlePlugin/FlexDeployGradlePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployGroovyPlugin/FlexDeployGroovyPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployGruntPlugin/FlexDeployGruntPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployHelmPlugin/FlexDeployHelmPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployHPTestPlugin/FlexDeployHPTestPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployIaaSPlugin/FlexDeployIaaSPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployInformaticaPlugin/FlexDeployInformaticaPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployJCSPlugin/FlexDeployJCSPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployJDBCPlugin/FlexDeployJDBCPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployJDeveloperPlugin/FlexDeployJDeveloperPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployJenkinsPlugin/FlexDeployJenkinsPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployJMeterPlugin/FlexDeployJMeterPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployJUnitPlugin/FlexDeployJUnitPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployJythonPlugin/FlexDeployJythonPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployKubernetesCore/FlexDeployKubernetesCore.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployKubernetesPlugin/FlexDeployKubernetesPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployMavenPlugin/FlexDeployMavenPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployMDSPlugin/FlexDeployMDSPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployMFTPlugin/FlexDeployMFTPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployMicrosoftTeamsPlugin/FlexDeployMicrosoftTeamsPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployMSBuildPlugin/FlexDeployMSBuildPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployMulePlugin/FlexDeployMulePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployNexusPlugin/FlexDeployNexusPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployNodePlugin/FlexDeployNodePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOACPlugin/FlexDeployOACPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOATSPlugin/FlexDeployOATSPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOBIPlugin/FlexDeployOBIPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOCCPlugin/FlexDeployOCCPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOCICore/FlexDeployOCICore.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOCIPlugin/FlexDeployOCIPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOdiPlugin/FlexDeployOdiPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOICPlugin/FlexDeployOICPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOJetPlugin/FlexDeployOJetPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOpenShiftPlugin/FlexDeployOpenShiftPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOracleAPEXPlugin/FlexDeployOracleAPEXPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOracleApexSecPlugin/FlexDeployOracleApexSecPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOracleAPIPlatformPlugin/FlexDeployOracleAPIPlatformPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOracleCPQPlugin/FlexDeployOracleCPQPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOracleDBPlugin/FlexDeployOracleDBPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOracleFormsPlugin/FlexDeployOracleFormsPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOracleSaaSFSMPlugin/FlexDeployOracleSaaSFSMPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployORDSPlugin/FlexDeployORDSPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOSBPlugin/FlexDeployOSBPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOTBIPlugin/FlexDeployOTBIPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployOVBPlugin/FlexDeployOVBPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployPeopleSoftPlugin/FlexDeployPeopleSoftPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployPerforcePlugin/FlexDeployPerforcePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployPluginCore/FlexDeployPluginCore.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployPostmanPlugin/FlexDeployPostmanPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployPowerShellPlugin/FlexDeployPowerShellPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployPuppetPlugin/FlexDeployPuppetPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployPVCSPlugin/FlexDeployPVCSPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployPythonPlugin/FlexDeployPythonPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployRestPlugin/FlexDeployRestPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySalesforcePlugin/FlexDeploySalesforcePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySAPPlugin/FlexDeploySAPPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployServiceNowPlugin/FlexDeployServiceNowPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployShellPlugin/FlexDeployShellPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySiebelPlugin/FlexDeploySiebelPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySlackPlugin/FlexDeploySlackPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySOACloudPlugin/FlexDeploySOACloudPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySOAPlugin/FlexDeploySOAPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySoapUIPlugin/FlexDeploySoapUIPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySODAPlugin/FlexDeploySODAPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySonarQubePlugin/FlexDeploySonarQubePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySQLclPlugin/FlexDeploySQLclPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySqlPlusPlugin/FlexDeploySqlPlusPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySurroundPlugin/FlexDeploySurroundPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeploySVNPlugin/FlexDeploySVNPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployTerraformPlugin/FlexDeployTerraformPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployTestAutomationCore/FlexDeployTestAutomationCore.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployTestNGPlugin/FlexDeployTestNGPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployTestPlugin/FlexDeployTestPlugin.jpr"/></hash>
+	  <hash><url n="URL" path="FlexDeployPMDPlugin/FlexDeployPMDPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployTFVCPlugin/FlexDeployTFVCPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployTomcatPlugin/FlexDeployTomcatPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployTricentisToscaPlugin/FlexDeployTricentisToscaPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployUTPLSQLPlugin/FlexDeployUTPLSQLPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployWebcenterPlugin/FlexDeployWebcenterPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployWeblogicPlugin/FlexDeployWeblogicPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployWebMethodsPlugin/FlexDeployWebMethodsPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployWebSpherePlugin/FlexDeployWebSpherePlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployWildflyPlugin/FlexDeployWildflyPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployWindowsShellPlugin/FlexDeployWindowsShellPlugin.jpr"/></hash>
+      <hash><url n="URL" path="FlexDeployXPathPlugin/FlexDeployXPathPlugin.jpr"/></hash>
+      <hash><url n="URL" path="NonWlsPluginUnitTests/NonWlsPluginUnitTests.jpr"/></hash>
+	  <hash><url n="URL" path="FlexDeployOWASPDependencyCheckPlugin/FlexDeployOWASPDependencyCheckPlugin.jpr"/></hash>
+	  <hash><url n="URL" path="FlexDeployOracleAPIGatewayPlugin/FlexDeployOracleAPIGatewayPlugin.jpr"/></hash>
+   </list>
+   <hash n="oracle.jdeveloper.model.ApplicationLibraries">
+      <hash n="internalDefinitions">
+         <list n="libraryDefinitions">
+            <hash>
+               <list n="classPath">
+                  <url path="dependencies/FlexDeploy/FlexDeployCore/adflibFlexDeployCore.jar" jar-entry=""/>
+                  <url path="dependencies/FlexFoundationADF/FlexFndCommonCore/adflibFlexFndCommonCore.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="ADF Library"/>
+               <value n="id" v="ADF Library"/>
+               <list n="sourcePath">
+                  <url path="dependencies/FlexDeploy/src/FlexDeployCore/FlexDeployCoreSrc.jar" jar-entry=""/>
+                  <url path="dependencies/FlexFoundationADF/src/FlexFndCommonCore/FlexFndCommonCoreSrc.jar" jar-entry=""/>
+               </list>
+            </hash>
+         </list>
+      </hash>
+      <list n="libraryReferences">
+         <hash>
+            <value n="id" v="ADF Library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.model.PathsConfiguration">
+      <hash n="ApplicationSrcContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="src/"/>
+         </list>
+      </hash>
+   </hash>
+</jws:workspace>
